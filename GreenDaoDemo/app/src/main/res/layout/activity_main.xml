@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="增"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/bt_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_delete"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="删"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/bt_update"
+        app:layout_constraintStart_toEndOf="@id/bt_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_update"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="改"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/bt_query"
+        app:layout_constraintStart_toEndOf="@id/bt_delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_query"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="查"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_update"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="bt_add,bt_delete,bt_query,bt_update" />
+
+    <TextView
+        android:id="@+id/tv_show_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#131313"
+        android:text="操作信息在此处显示"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
